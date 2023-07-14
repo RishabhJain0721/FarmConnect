@@ -1,0 +1,45 @@
+/* *:focus {
+    outline: none;
+}
+
+.consumer-head{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+
+.consumer-logo img{
+    
+    height: 70px;
+    width: 160px;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: space-between;
+    margin-top:15px;
+    margin-left:60px;
+    padding: 10px;
+    height: 55px;
+     min-width: 600px;
+    background-color:antiquewhite;
+    border-radius: 10px;
+    background: rgb(167,215,197);
+}
+
+.search-bar input{
+    min-width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-bar button{
+    color: white;
+    border-radius: 5px;
+    border: none;
+    background: darkgreen;
+    width:80px
+}
+ */
