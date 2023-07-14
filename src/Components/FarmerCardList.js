@@ -1,7 +1,7 @@
 import React from "react";
 import { useFarmContext } from "../Context/useContext";
 
-import FarmerCard from "../Component/FarmerCard";
+import FarmerCard from "../Components/FarmerCard";
 
 const FarmerCardList = () => {
   const { myList } = useFarmContext();

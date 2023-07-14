@@ -1,5 +1,5 @@
 import React from "react";
-import FarmerCardList from "../Component/FarmerCardList";
+import FarmerCardList from "../Components/FarmerCardList";
 import Logo from "../Assets/Images/Logo.png";
 import userImg from "../Assets/Images/userImg.png";
 import { Link } from "react-router-dom";

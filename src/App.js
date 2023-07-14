@@ -5,7 +5,9 @@ import SignUp from "./Pages/SignUp";
 import LogIn from "./Pages/LogIn";
 import { auth } from "./firebase";
 import Farmer from "./Pages/Farmer";
-import FarmerForm from "./Component/FarmerForm";
+import FarmerForm from "./Components/FarmerForm";
+import Consumer from "./Pages/Consumer";
+import ConsumerBuyCard from "./Components/ConsumerBuyCard";
 function App() {
   const [user, setUser] = useState("");
 
@@ -26,10 +28,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<LogIn />} />
+        <Route path="/consumer" element={<Consumer/>}/>
+        <Route path="/consumerBuyCard" element={<ConsumerBuyCard/>}/>
         <Route path="/farmer" element={<Farmer />} />
         <Route path="/farmer-form" element={<FarmerForm />} />
       </Routes>
     </BrowserRouter>
+    // <Consumer/>
   );
 }
 
