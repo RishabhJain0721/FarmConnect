@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-// import FormField from "../components/formField";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
+import { useFarmContext } from "../Context/useContext";
 
 const SignUp = () => {
-
+  const {currUser}=useFarmContext();
   const navigate=useNavigate();
 
   const [values, setValues] = useState({
@@ -40,12 +40,18 @@ const SignUp = () => {
         await updateProfile(user, {
           displayName: values.name,
         });
-        navigate("/aftersignup");
+        
+        if(currUser === "farmer"){
+          navigate("/farmer", { state: { name: values.name } });
+        }else{
+          navigate("/consumer",{state:{name:values.name} });
+        }
+
       })
       .catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorMessage);
+        setErrorMsg(error.message);
+        console.log(errorMsg);
         console.log(errorCode);
       });
   };
@@ -113,7 +119,7 @@ const SignUp = () => {
           </div>
 
           <p className="confirmation">
-            Already have an account? <a href="/login">Login</a>
+            Already have an account? <span onClick={() => navigate("/login")}> Login </span>
           </p>
           <button
             className="ui button"

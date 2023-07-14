@@ -89,6 +89,10 @@
   .confirmation{
     font-size: 1em;
   }
+  .confirmation span{
+    color: rgb(23, 23, 176);
+    cursor: pointer;
+  }
   .errorMsg{
     color: rgb(184, 2, 2);
     font-size: 1em;

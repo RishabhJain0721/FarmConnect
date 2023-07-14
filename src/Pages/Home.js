@@ -1,21 +1,23 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import leftImage from "../Assets/Images/homePageImg.jpg";
+import fclogo from "../Assets/Images/Logo.png";
 import { useFarmContext } from "../Context/useContext";
-import leftImage from "../images/homePageImages/homePageImg.jpg";
-import fclogo from "../images/homePageImages/fclogo.png";
 
 const Home = () => {
-  const { home, setHome } = useFarmContext();
   const navigate = useNavigate();
+  const {currUser,setCurrUser} = useFarmContext();
 
   const handleFarmerClick = () => {
     // Redirect to the farmer login or signup page
     navigate("/login");
+    setCurrUser("farmer")
   };
 
   const handleConsumerClick = () => {
     // Redirect to the consumer login or signup page
     navigate("/login");
+    setCurrUser("consumer")
   };
 
   return (
