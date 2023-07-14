@@ -1,0 +1,96 @@
+* {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .homePage {
+    background-color: #a7cd92;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .homeLeft {
+    width: 30%;
+  }
+  
+  .homeLeft img {
+    height: 100vh;
+  }
+  
+  .homeRight {
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+  }
+  
+  .ui.huge.header {
+    font-family: serif;
+    font-size: 5em;
+    text-align: end;
+  }
+  
+  .ui.homePageButtonColor.button {
+    background-color: #c7ecbf;
+    color: #3f6154;
+    transition: 300ms;
+  }
+  
+  .ui.homePageButtonColor.button:hover {
+    background-color: #afd0a8;
+  }
+  
+  .ui.homePageButtonColor.button:active {
+    background-color: #788f73;
+    color: #ffffff;
+  }
+  p{
+    font-size: larger;
+  }
+  .logo {
+    align-self: flex-end; 
+  }
+  
+  .logo img {
+    height: 10vh;
+  }
+  .signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #a7cd92;
+  }
+  .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #a7cd92;
+  }
+  .container{
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 1em;
+  }
+  .confirmation{
+    font-size: 1em;
+  }
+  .errorMsg{
+    color: rgb(184, 2, 2);
+    font-size: 1em;
+    text-align: center;
+  }
