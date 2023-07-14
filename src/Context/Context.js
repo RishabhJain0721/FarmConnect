@@ -69,9 +69,30 @@ export const ContextProvider = ({ children }) => {
     btlocation:"",
     btprice:"",
   })
+  const [groceryDetail, setGroceryDetail] = useState({
+    name: "",
+    price: "",
+    imageUrl: "",
+    location: "Charbagh",
+  });
+
+ 
+ 
+  const [myList, setMyList] = useState([]);
+  const [isEditing, setIsEditing] = useState(false);
 
   return (
-    <Context.Provider value={{ consumerCardDetails,consumerSearch,setConsumerSearch,consumerBought,setConsumerBought }}>
+    <Context.Provider
+      value={{
+        groceryDetail,
+        setGroceryDetail,
+        myList,
+        setMyList,
+        isEditing,
+        setIsEditing,
+        consumerSearch,setConsumerSearch,consumerBought,setConsumerBought
+      }}
+    >
       {children}
     </Context.Provider>
   );

@@ -6,6 +6,7 @@ import ConsumerBuyCard from "./Components/ConsumerBuyCard";
 // import { Route } from "react-router-dom";
 
 
+import Farmer from "./Pages/Farmer";import FarmerForm from "./Component/FarmerForm";
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +14,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/consumer" element={<Consumer/>}/>
         <Route path="/consumerBuyCard" element={<ConsumerBuyCard/>}/>
+        <Route path="/farmer" element={<Farmer />} />
+        <Route path="/farmer-form" element={<FarmerForm />} />
       </Routes>
     </BrowserRouter>
     // <Consumer/>

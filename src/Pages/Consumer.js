@@ -1,7 +1,6 @@
-import React, { useState,Link,Form } from 'react';
+import React, { useState } from 'react';
 import { singular } from 'pluralize';
 
-import './consumer.css';
 import Logo from "../Assets/Images/Logo.png";
 import ConsumerCardList from '../Components/ConsumerCardList';
 import { useFarmContext } from '../Context/useContext';
