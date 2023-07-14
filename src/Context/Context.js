@@ -1,5 +1,9 @@
 import { createContext, useState } from "react";
-import Logo from '../Assets/Images/Tomato.jpg'
+import Tomato from '../Assets/Images/Tomato.jpg'
+import Potato from '../Assets/Images/Potato.jpeg'
+import Carrot from '../Assets/Images/Carrot.jpg'
+import LadyFinger from '../Assets/Images/LadyFinger.webp'
+import Cabbage from '../Assets/Images/Cabbage.jpeg'
 
 export const Context = createContext();
 
@@ -10,7 +14,7 @@ export const ContextProvider = ({ children }) => {
 
   const [consumerCardDetails,setconsumerCardDetails]=useState([
     {
-      // image:<Logo/>,
+      image:Tomato,
       name:'Tomato',
       rate:'80',
       provider:'Satyapal',
@@ -18,7 +22,7 @@ export const ContextProvider = ({ children }) => {
       location:'Charbagh Lucknow',
     },
     {
-      // image:<Logo/>,
+      image:Potato,
       name:'Potato',
       rate:'40',
       provider:'Ramu',
@@ -27,7 +31,7 @@ export const ContextProvider = ({ children }) => {
     },
     {
       name:'Carrot',
-      image:<Logo/>,
+      image:Carrot,
       rate:'60',
       provider:'Rampal',
       mob :'9856XXXXX',
@@ -35,7 +39,7 @@ export const ContextProvider = ({ children }) => {
     },
     {
       name:'Lady Finger',
-      image:<Logo/>,
+      image:LadyFinger,
       rate:'50',
       provider:'Satyapal',
       mob :'9856XXXXX',
@@ -43,7 +47,7 @@ export const ContextProvider = ({ children }) => {
     },
     {
       name:'Lady Finger',
-      image:<Logo/>,
+      image:LadyFinger,
       rate:'60',
       provider:'Rampal',
       mob :'9856XXXXX',
@@ -51,7 +55,7 @@ export const ContextProvider = ({ children }) => {
     },
     {
       name:'Cabbage',
-      image:<Logo/>,
+      image:Cabbage,
       rate:'60',
       provider:'Satyapal',
       mob :'9856XXXXX',
@@ -90,7 +94,7 @@ export const ContextProvider = ({ children }) => {
         setMyList,
         isEditing,
         setIsEditing,
-        consumerSearch,setConsumerSearch,consumerBought,setConsumerBought
+        consumerSearch,setConsumerSearch,consumerBought,setConsumerBought,consumerCardDetails,setconsumerCardDetails
       }}
     >
       {children}
