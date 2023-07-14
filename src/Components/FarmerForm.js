@@ -74,7 +74,7 @@ const FarmerForm = () => {
         <form className="max-w-lg mx-auto p-8 bg-white shadow-lg rounded-lg">
           <div className="mb-6">
             <label htmlFor="name" className="text-2xl font-bold text-gray-800">
-              Name:
+              Vegetable Name:
             </label>
             <input
               type="text"

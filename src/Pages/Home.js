@@ -27,7 +27,7 @@ const Home = () => {
       </div>
 
       <div className="homeRight">
-        <div className="ui huge header head">Farm Connect</div>
+        <div className="header">FARMCONNECT</div>
         <br />
 
         <div className="buttons">
