@@ -10,12 +10,13 @@ const ConsumerCard = ({cardDetail}) => {
   const [amount,setAmount] = useState(1);
 
   // console.log(cardDetail);
-  const {name,rate,provider,mob,location} = cardDetail
+  const {image,name,rate,provider,mob,location} = cardDetail
   const {consumerBought,setConsumerBought} =useFarmContext()
-  const {btname,btrate,btprovider,btmob,btlocation,btamount}=consumerBought
+  const {btname,btrate,btprovider,btmob,btlocation,btamount,btimage}=consumerBought
 
   function handlebuynow(){
     setConsumerBought({
+      btimage:image,
       btname:name,
       btamount:amount,
       btprice:amount*rate,
@@ -31,7 +32,7 @@ const ConsumerCard = ({cardDetail}) => {
 
   return (
     <div className="max-w-xs  px-2 pt-6 bg-white shadow-md rounded-lg overflow-hidden card hover:translate-y-[-5px] transition duration-300 ease-in-out mx-2 my-6">
-      <img src={Tomato} alt="Vegetable" className="w-full h-auto" />
+      <img src={image} alt="Vegetable" className="w-full h-auto" />
       <div className="p-4">
         <div className="flex">
           <h3 className="text-xl font-bold mb-2 mr-5">{name}</h3>

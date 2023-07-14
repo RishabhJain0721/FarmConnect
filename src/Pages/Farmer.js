@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import FarmerCardList from "../Components/FarmerCardList";
 import Logo from "../Assets/Images/Logo.png";
 import userImg from "../Assets/Images/userImg.png";
@@ -7,11 +7,9 @@ import { useFarmContext } from "../Context/useContext";
 import { useLocation } from "react-router-dom";
 
 const Farmer = () => {
-  const { setIsEditing, myList } = useFarmContext();
-  const location = useLocation();
-  const user = location.state.name || "Null";
-  console.log(user);
-  console.log(location);
+  const { setIsEditing, myList,currUserName, setCurrUserName } = useFarmContext();
+  
+ 
   return (
     <div className="p-10">
       <div className="name flex justify-between mb-4 ">
@@ -21,7 +19,7 @@ const Farmer = () => {
             <img src={userImg} alt="Avatar" className="w-10 h-10" />
           </div>
           <span className="ml-4 font-normal font-poppins text-2xl">
-            {user}
+            {currUserName}
           </span>
           <svg
             xmlns="http://www.w3.org/2000/svg"

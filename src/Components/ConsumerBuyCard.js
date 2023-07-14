@@ -7,7 +7,7 @@ import { useFarmContext } from "../Context/useContext";
 export default function ConsumerBuyCard() {
 
   const {consumerBought,setConsumerBought} =useFarmContext()
-  const {btname,btrate,btprovider,btmob,btlocation,btamount,btprice}=consumerBought
+  const {btimage,btname,btrate,btprovider,btmob,btlocation,btamount,btprice}=consumerBought
 
   // function handleAddItem(){
   //     setConsumerBought
@@ -40,7 +40,7 @@ export default function ConsumerBuyCard() {
   <div className="p-4 bg-green-500 text-white font-bold ">
     You bought {btamount}kg {btname} at a rate of Rs {btrate}/kg.
   </div>
-  <img src={Tomato} alt="Vegetable" className="w-full h-auto" />
+  <img src={btimage} alt="Vegetable" className="w-full h-auto" />
   <div className="p-4">
  
     <p className="mb-2 text-[#35594B] font-bold">Total Price: Rs.{btprice}  </p>

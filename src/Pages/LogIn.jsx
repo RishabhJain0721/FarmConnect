@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useFarmContext } from "../Context/useContext";
 
 const LogIn = () => {
-  const { currUser } = useFarmContext();
+  const { currUser,currUserName, setCurrUserName } = useFarmContext();
   const navigate = useNavigate();
 
   const [values, setValues] = useState({
@@ -28,9 +28,11 @@ const LogIn = () => {
     signInWithEmailAndPassword(auth, values.email, values.password)
       .then(async (userCredential) => {
         if (currUser === "farmer") {
-          navigate("/farmer", { state: { name: values.name } });
+          setCurrUserName(values.name);
+          navigate("/farmer");
         } else {
-          navigate("/consumer", { state: { name: values.name } });
+          setCurrUserName(values.name);
+          navigate("/consumer");
         }
       })
       .catch((error) => {
